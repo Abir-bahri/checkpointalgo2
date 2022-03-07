@@ -1,0 +1,32 @@
+ALGORITHM checkpointalgo
+VAR
+    i,a,b ,n:INTEGER;
+    str:STRING;
+BEGIN
+  repeat
+    write("enter a sentence")
+    read(str)
+    
+  until (str[str.length]='.')
+  n:=str.length;
+  write(n)
+  a=b:=0;
+  i=1;
+  for i from 1 to n do 
+    if (str[i]='') then
+       a:=a+1;
+    end_if
+    switch (str[i]) do
+       case 'a':
+       case 'e':
+       case 'i':
+       case 'o':
+       case 'u':
+       b:=b+1;
+       break;
+       default:
+    end_switch
+    write(a)
+    write(b)
+  end_for
+END

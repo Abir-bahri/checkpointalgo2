@@ -1,0 +1,30 @@
+ALGORITHM set_hashttable
+VAR
+    htab1 : HASH_TABLE<INTEGER,STRING>;
+    htab2 : HASH_TABLE<INTEGER,STRING>;
+    i,j,count : INTEGER;
+BEGIN
+   
+    write("enter htab1")
+    htab1.insert(0,"zero");
+    htab1.insert(1,"un");
+    htab1.insert(2,"deux");
+    htab1.insert(3,"trois");
+    htab1.insert(4,"quatre");
+    write("enter htab2")
+    htab2.insert(0,"zero");
+    htab2.insert(1,"trois");
+    htab2.insert(2,"deux");
+    htab2.insert(3,"trois");
+    htab2.insert(4,"quatre");
+  
+   FOR i FROM 0 TO 9  DO
+    FOR i FROM 0 TO 9  DO
+       IF (htab1[i] = htab2[j]) THEN
+           count := htab.get(str[i]);
+           htab.insert(str[i],count+1);
+       ELSE
+           htab.insert(str[i],1);
+       END_IF
+   END_FOR
+END
